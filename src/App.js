@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+import {Provider} from 'mobx-react';
 import './App.css';
 import Home from './component/Home'
+import Count from './component/Count'
+import stores from './stores'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Home/>
-      </div>
+      <Provider {...stores}>
+        <div className="App">
+          <Home/>
+          <Count/>
+        </div>
+      </Provider>
     );
   }
 }
