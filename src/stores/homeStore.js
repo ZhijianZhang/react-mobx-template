@@ -1,4 +1,5 @@
-import {observable, action, computed} from 'mobx'
+import {observable, action, computed, configure} from 'mobx'
+configure({enforceActions: true})
 
 class HomeStore {
   @observable name = 'testname'
