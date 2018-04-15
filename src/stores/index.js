@@ -1,9 +1,9 @@
 import homeStore from './homeStore'
 import countStore from './countStore'
+import crowdStore from './crowdStore'
 
-const stores = {
+export default {
   homeStore,
-  countStore
+  countStore,
+  crowdStore
 }
-
-export default stores

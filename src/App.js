@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Provider} from 'mobx-react';
+import React, { Component } from 'react';
+import { Provider } from 'mobx-react';
 import './App.css';
 import Home from './component/Home'
 import Count from './component/Count'
@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <Provider {...stores}>
         <div className="App">
-          <Home/>
-          <Count/>
+          <Home />
+          <Count />
         </div>
       </Provider>
     );
