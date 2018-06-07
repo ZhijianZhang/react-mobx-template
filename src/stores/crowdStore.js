@@ -3,7 +3,8 @@ configure({ enforceActions: true })
 
 class CrowdStore {
   @observable deleteModalStore = {
-    visible: false
+    visible: false,
+    testList: [1, 2, 3, 5]
   }
 
   // deleteModal

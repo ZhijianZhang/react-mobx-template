@@ -14,6 +14,10 @@ const modal = ({ deleteModalStore, changeDeleteVisible }) => {
     changeDeleteVisible(false)
   }
 
+  const { visible, testList } = deleteModalStore
+
+  console.log('visible: ', visible, testList.slice(0))
+
   return (<div>
     <Modal
       title="删除数据源"
