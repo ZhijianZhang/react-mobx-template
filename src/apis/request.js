@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // 默认url前缀
-axios.defauls.baseURL = 'xxx'
+// axios.defauls.baseURL = 'xxx'
 // axios 进行跨域请求时带上cookie
 axios.defaults.withCredentials = true
 // 设置axios 的请求超时时间
@@ -15,9 +15,10 @@ axios.interceptors.request.use((config) => {
 
 // axios拦截器
 // data: { retcode: 200, data: obj }
+// 这里需要规范一下返回体
 axios.interceptors.response.use(response => {
   // 在这里你可以判断后台返回数据携带的请求码
-  if (response.data.retcode === 200 || response.data.retcode === '200') {
+  if (response.status === 200 || response.status === '200') {
     return response.data.data || response.data
   } else {
     // 非200请求报错

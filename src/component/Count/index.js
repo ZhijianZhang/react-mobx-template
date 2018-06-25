@@ -2,10 +2,23 @@ import React from 'react'
 import { Button } from 'antd'
 import { observer, inject } from 'mobx-react'
 import DeleteModal from '../DeleteModal'
+import { getTest, getTest2, getTest3, getTest4 } from '../../apis/test'
 
 @inject('countStore', 'crowdStore')
 @observer
 class Count extends React.Component {
+
+  async componentDidMount() {
+
+    const resp2 = await getTest2();
+    const resp3 = await getTest3();
+    const resp4 = await getTest4();
+    const resp = await getTest();
+    console.log('resp', resp)
+    console.log('resp', resp2)
+    console.log('resp', resp3)
+    console.log('resp', resp4)
+  }
 
   directChangeNum = () => {
     this.props.countStore.num = 100
