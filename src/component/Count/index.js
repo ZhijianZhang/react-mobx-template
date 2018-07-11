@@ -8,16 +8,23 @@ import { getTest, getTest2, getTest3, getTest4 } from '../../apis/test'
 @observer
 class Count extends React.Component {
 
-  async componentDidMount() {
+  componentDidMount() {
 
-    const resp2 = await getTest2();
-    const resp3 = await getTest3();
-    const resp4 = await getTest4();
-    const resp = await getTest();
+    // const resp2 = await getTest2();
+    // const resp3 = await getTest3();
+    const resp4 = getTest();
+    console.log('resp4 ', resp4)
+    console.log('await 之前')
+    // const resp = await getTest();
+    const resp = getTest();
+    console.log('await 之后')
+    console.log('resp 之前')
     console.log('resp', resp)
-    console.log('resp', resp2)
-    console.log('resp', resp3)
-    console.log('resp', resp4)
+    console.log('resp 之后')
+
+    // console.log('resp', resp2)
+    // console.log('resp', resp3)
+    // console.log('resp', resp4)
   }
 
   directChangeNum = () => {
