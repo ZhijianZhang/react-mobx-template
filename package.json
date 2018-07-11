@@ -48,10 +48,13 @@
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
+  "homepage": "https://zhijianzhang.github.io/react-mobx-template/",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -101,6 +104,7 @@
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "gh-pages": "^1.2.0",
     "less": "^3.0.1",
     "less-loader": "^4.1.0"
   }
